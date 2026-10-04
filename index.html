@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zhaanoosh | پنل مدیریت</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&family=Cinzel:wght@600;700&display=swap">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#0b0b0c;color:#f1ece0;font-family:'Vazirmatn',sans-serif}
+  a{color:#e8c76a;text-decoration:none}
+  .wrap{width:100%;max-width:1320px;margin:0 auto;display:flex;min-height:100vh}
+  aside{width:230px;flex:0 0 230px;background:#131110;border-left:1px solid #2a2520;padding:24px 18px;display:flex;flex-direction:column;gap:6px}
+  aside .brand{font-family:'Cinzel',serif;color:#e8c76a;font-size:18px;margin-bottom:24px}
+  aside .brand span{font-size:11px;color:#9a9186;font-family:'Vazirmatn';display:block;margin-top:4px}
+  aside a{padding:10px 12px;border-radius:6px;color:#cfc7ba;font-size:14px}
+  aside a.active{background:#1f1b16;color:#e8c76a}
+  main{flex:1;padding:28px 32px;display:flex;flex-direction:column;gap:28px}
+  .dash-header{display:flex;justify-content:space-between;align-items:center}
+  h1{font-family:'Cinzel',serif;font-size:22px;color:#f1ece0;margin:0}
+  .add-btn{background:linear-gradient(135deg,#e8c76a,#c9a227);color:#1a1611;border:none;padding:10px 20px;border-radius:5px;font-weight:700;font-size:14px;cursor:pointer;font-family:inherit}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+  .stat{background:#141210;border:1px solid #2a2520;border-radius:8px;padding:18px}
+  .stat .l{color:#9a9186;font-size:13px;margin-bottom:8px}
+  .stat .v{font-size:24px;font-weight:700;color:#e8c76a}
+  h2{font-size:16px;color:#e8c76a;margin-bottom:12px}
+  .table-wrap{overflow-x:auto;border:1px solid #2a2520;border-radius:8px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  thead tr{background:#161310;color:#9a9186;text-align:right}
+  th,td{padding:12px}
+  tbody tr{border-top:1px solid #2a2520}
+  .badge{padding:4px 10px;border-radius:12px;font-size:12px}
+  .badge.proc{background:#2a2410;color:#e8c76a}
+  .badge.shipped{background:#163024;color:#5fd98a}
+  .badge.cancel{background:#2a1616;color:#e36b6b}
+  .form-card{background:#141210;border:1px solid #2a2520;border-radius:8px;padding:20px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  label{display:flex;flex-direction:column;gap:6px;font-size:13px;color:#9a9186}
+  input{background:#0e0c0a;border:1px solid #2a2520;border-radius:5px;padding:10px;color:#f1ece0;font-family:inherit}
+  .credit{text-align:center;color:#6e665c;font-size:12px;padding-top:10px}
+  @media (max-width:820px){
+    .wrap{flex-direction:column}
+    aside{width:100%;flex:0 0 auto;border-left:none;border-bottom:1px solid #2a2520;flex-direction:row;overflow-x:auto;gap:8px;padding:14px}
+    aside .brand{display:none}
+    main{padding:20px 16px}
+    .dash-header{flex-direction:column;align-items:flex-start;gap:12px}
+    .form-card{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <aside>
+    <div class="brand">ZHAANOOSH<span>پنل مدیریت</span></div>
+    <a href="#" class="active">داشبورد</a>
+    <a href="#">محصولات</a>
+    <a href="#">سفارش‌ها</a>
+    <a href="#">گزارش فروش</a>
+    <a href="#">مشتریان</a>
+    <a href="#">تنظیمات و امنیت</a>
+  </aside>
+
+  <main>
+    <div class="dash-header">
+      <h1>داشبورد فروش</h1>
+      <button class="add-btn">+ افزودن محصول جدید</button>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="l">فروش امروز</div><div class="v">[مبلغ]</div></div>
+      <div class="stat"><div class="l">سفارش‌های جدید</div><div class="v">[تعداد]</div></div>
+      <div class="stat"><div class="l">موجودی کم</div><div class="v">[تعداد]</div></div>
+      <div class="stat"><div class="l">مشتریان جدید</div><div class="v">[تعداد]</div></div>
+    </div>
+
+    <div>
+      <h2>آخرین سفارش‌ها</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>شماره سفارش</th><th>مشتری</th><th>محصول</th><th>مبلغ</th><th>وضعیت</th></tr></thead>
+          <tbody>
+            <tr><td>[#1024]</td><td>[نام مشتری]</td><td>هودی داریوش کبیر</td><td>[مبلغ]</td><td><span class="badge proc">در حال پردازش</span></td></tr>
+            <tr><td>[#1023]</td><td>[نام مشتری]</td><td>سویشرت کوروش کبیر</td><td>[مبلغ]</td><td><span class="badge shipped">ارسال شد</span></td></tr>
+            <tr><td>[#1022]</td><td>[نام مشتری]</td><td>تیشرت اورسایز شاه</td><td>[مبلغ]</td><td><span class="badge cancel">لغو شده</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div>
+      <h2>افزودن محصول (پیش‌نمایش فرم)</h2>
+      <div class="form-card">
+        <label>نام محصول<input type="text" placeholder="مثلا: هودی داریوش کبیر"></label>
+        <label>قیمت (تومان)<input type="text" placeholder="[قیمت]"></label>
+        <label>سایزهای موجود<input type="text" placeholder="S, M, L, XL, 2XL, 3XL, 4XL, سفارشی"></label>
+        <label>دسته‌بندی<input type="text" placeholder="هودی / تیشرت / سویشرت"></label>
+      </div>
+    </div>
+
+    <div class="credit">طراحی و توسعه: اشکان رجایی · 09056854069</div>
+  </main>
+</div>
+</body>
+</html>
